@@ -1,40 +1,144 @@
 #
 # Web Scraper
-# Version: 1
+# Version: 4
 
-from splinter import Browser
-import pandas as pd
+"""
+cd C:\Users\Dexter Carpenter\Documents\GitHub\WebScraper\environment
 
-url = "https://www.google.com"
+c:\Python27\Scripts\virtualenv.exe -p C:\Python27\python.exe .lpvenv
 
-browser = Browser('chrome')  # open a chrome browser
-browser.visit(url)  # goes to the url
+.lpvenv\Scripts\activate
+"""
 
-search_bar_xpath = '//*[@id="lst-ib"]'
-search_bar = browser.find_by_xpath(search_bar_xpath)[0]  # find_by_xpath returns a list, so index 0
-search_bar.fill("CodingStartups.com")  # simulate typing
+# import libraries
+import urllib2
+from bs4 import BeautifulSoup
+import time
+
+#variables
+global tagcount
+
+print ""
+print "Press 'Ctrl + C' to exit the program"
+# specify the url
+quote_page = raw_input('Enter what website you want to scrape:')
+print ""
+
+"""
+def main():
+    # specify the url
+    quote_page = 'https://www.bloomberg.com/quote/SPX:IND'
+
+    # query the website and return the html to the variable page
+    page = urllib2.urlopen(quote_page)
+
+    # parse the html using beautiful soap and store in variable 'soup'
+    soup = BeautifulSoup(page, 'html.parser')
+
+    # Take out the <div> of name and get its value
+    name_box = soup.find('h1', attrs={'class': 'name'})
+
+    name = name_box.text.strip() # strip() is used to remove starting and trailing
+    print name
+
+    # get the index price
+    price_box = soup.find('div', attrs={'class':'price'})
+    price = price_box.text
+    print price
+"""
+
+def scraper():
+    # query the website and return the html to the variable page
+    page = urllib2.urlopen(quote_page)
+    
+    # parse the html using beautiful soup and store in variable 'soup'
+    soup = BeautifulSoup(page, 'html.parser')
+    
+    for tag in soup.findAll():
+        tagcount = soup.findAll()
+        tagcount += 1
+    
+    # Take out the <div> of name and get its value
+    name_box = soup.find()
+    
+    name = name_box.text.strip() # strip() is used to remove starting and trailing
+    print name
+    
+    # get the index price
+    price_box = soup.find('div', attrs={'class':'price'})
+    price = price_box.text
+    print price
 
 
-search_button_xpath = '//*[@id="tsf"]/div[2]/div[3]/center/input[1]'
-search_button = browser.find_by_xpath(search_button_xpath)[0]
-search_button.click()  # simulate clicking
+while True:
+    
+    if __name__ == "__main__":
+        scraper()
+    
+    time.sleep(10)
+    
+    tagcount = 0
 
 
-search_results_xpath = '//h3[@class="r"]/a'
-search_results = browser.find_by_xpath(search_results_xpath)  # returns list of link elements
 
-# iterate through list of link elements
-scraped_data = []
-for search_result in search_results:
 
-	title = search_result.text.encode('utf8')  # trust me, clean data
-	link = search_result["href"]
-	scraped_data.append((title, link))
 
-# put all the data into a pandas dataframe
-df = pd.DataFrame(data=scraped_data, columns=["title", "link"])
-df.to_csv("links.csv")	# export to csv
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+Nathan Says this is trash -- it is for printing to an excel file?......
+
+import csv
+from datetime import datetime
+
+# open a csv file with append, so old data will not be erased
+with open('index.csv', 'a') as csv_file:
+ writer = csv.writer(csv_file)
+ writer.writerow([name, price, datetime.now()])
+
+quote_page = ['http://www.bloomberg.com/quote/SPX:IND', 'http://www.bloomberg.com/quote/CCMP:IND']
+
+# for loop
+data = []
+for pg in quote_page:
+ # query the website and return the html to the variable page
+ page = urllib2.urlopen(pg)
+# parse the html using beautiful soap and store in variable 'soup'
+ soup = BeautifulSoup(page, 'html.parser')
+# Take out the <div> of name and get its value
+ name_box = soup.find('h1', attrs={'class': 'name'})
+ name = name_box.text.strip() # strip() is used to remove starting and trailing
+# get the index price
+ price_box = soup.find('div', attrs={'class':'price'})
+ price = price_box.text
+# save the data in tuple
+ data.append((name, price))
+
+# open a csv file with append, so old data will not be erased
+with open('index.csv', 'a') as csv_file:
+ writer = csv.writer(csv_file)
+ # The for loop
+ for name, price in data:
+    writer.writerow([name, price, datetime.now()])
+"""
 
 
 
