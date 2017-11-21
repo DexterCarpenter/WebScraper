@@ -8,6 +8,11 @@ cd C:\Users\Dexter Carpenter\Documents\GitHub\WebScraper\environment
 c:\Python27\Scripts\virtualenv.exe -p C:\Python27\python.exe .lpvenv
 
 .lpvenv\Scripts\activate
+
+# on at home computer:
+
+cd C:\Users\dexte\Documents\GitHub\WebScraper\environment
+
 """
 
 # import libraries
