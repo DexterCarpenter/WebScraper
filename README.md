@@ -27,4 +27,5 @@ You're all set! Happy Scraping!
 
 WebScraper created by:
 Dexter Carpenter
+
 """
