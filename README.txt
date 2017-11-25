@@ -31,4 +31,8 @@ You're all set! Happy Scraping!
 WebScraper created by:
 Dexter Carpenter
 
+<<<<<<< HEAD
 """
+=======
+"""
+>>>>>>> dd0346bff4b953ce8eec3451a9fff43157f638c2
