@@ -16,10 +16,7 @@ There are several folders in my repository.
 'environment' = this folder was used to host my virtual environment. I recommend you use this folder as
                 well for you virtual environment.
                 Also included in the repository is a .gitignore file. This file ignores the .lpvenv file
-                generated in the 'environment'
-                file - making 'environment' a great place to host your virtual environemnt. Located in this folder is also a file called
-                'WebScraper8.py'. This is the file that is my current version of my scraper. This is the file you should run to access my
-                scraper.
+                generated in the 'environment' file - making 'environment' a great place to host your virtual environemnt. Located in this folder is also a file called 'WebScraper8.py'. This is the file that is my current version of my scraper. This is the file you should run to access my scraper.
 
 Before running, be sure you install BeautifulSoup 4 in your vitual environment:
 
