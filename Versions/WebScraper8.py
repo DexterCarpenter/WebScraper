@@ -23,13 +23,16 @@ import time
 #variables
 global tagcountnow
 global tagcountold
+global scrape_interval
 
 
 
-print ""
+print ''
 print "Press 'Ctrl + C' to exit the Scraper"
+
 # specify the url
-quote_page = raw_input('Enter what website you want to scrape: ')
+print 'Enter what website you want to scrape:'
+quote_page = raw_input()
 try:
 	webUrl = urllib2.urlopen(quote_page)
 	if(webUrl.getcode() == 200):
@@ -39,13 +42,17 @@ try:
 except Exception:
 	quote_page = raw_input('Enter a valid website: ')
 
-print ""
+print ''
 
-print "The Scraper will check the number of tags in the webpage."
-print "The Scraper will display 'Change!' if the number of tags has changed from the previous scan."
-print "The Scraper will scan every 10 seconds"
+print 'How often do you want to scrape the webpage? (seconds)'
+scrape_interval = raw_input()
 
-print ""
+print ''
+
+print 'The Scraper will check the number of tags in the webpage.'
+print 'The Scraper will display "Change!" if the number of tags has changed from the previous scan.'
+
+print ''
 
 print 'Scraping...'
 
@@ -87,11 +94,11 @@ def scraper():
 	tagcountold = tagcountnow
 
 while True:
-    
+	
     if __name__ == "__main__":
         scraper()
     
-    time.sleep(10)
+    time.sleep(float(scrape_interval))
 
 
 
