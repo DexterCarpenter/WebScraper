@@ -8,6 +8,8 @@ Here is the tutorial I followed:
 
 https://medium.freecodecamp.org/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe
 
+________________________________________________________________________________________________________________________________________
+
 There are several folders in my repository:
 
 **'Notes':**
@@ -20,12 +22,24 @@ There are several folders in my repository:
 
 **'environment'**
 
-- This folder was used to host my virtual environment. I recommend you use this folder as well for you virtual environment. Also included in the repository is a .gitignore file. This file ignores the .lpvenv file generated in the 'environment' file - making 'environment' a great place to host your virtual environemnt. Located in this folder is also a file called 'WebScraper8.py'. This is the file that is my current version of my scraper. This is the file you should run to access my scraper.
+- This folder was used to host my virtual environment.
+- I recommend you use this folder as well for you virtual environment.
+- Also included in the repository is a .gitignore file. This file ignores the .lpvenv file generated in the 'environment' file - making 'environment' a great place to host your virtual environemnt.
+- Located in this folder is also a file called 'WebScraper8.py'. This is the file that is my current version of my scraper. This is the file you should run to access my scraper.
+
+________________________________________________________________________________________________________________________________________
 
 Here is my Flowchart: It outlines what my program does:
 
 // INSERT FLOWCHART HERE //
+
 // IF YOU DON'T SEE IT GO TO MY 'Notes' FOLDER //
+
+________________________________________________________________________________________________________________________________________
+
+**Install Instructions:**
+
+I am using Python 2.7.14
 
 Before running, be sure you install BeautifulSoup 4 in your virtual environment:
 
@@ -34,5 +48,8 @@ Before running, be sure you install BeautifulSoup 4 in your virtual environment:
 
 You're all set! Happy Scraping!
 
+________________________________________________________________________________________________________________________________________
+
 WebScraper created by:
+
 Dexter Carpenter
