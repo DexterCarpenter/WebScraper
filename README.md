@@ -31,9 +31,7 @@ ________________________________________________________________________________
 
 Here is my Flowchart: It outlines what my program does:
 
-// INSERT FLOWCHART HERE //
-
-// IF YOU DON'T SEE IT GO TO MY 'Notes' FOLDER //
+![Flowchart](https://github.com/OldManLagz/WebScraper/blob/master/Notes/FlowChart.png)
 
 ________________________________________________________________________________________________________________________________________
 
