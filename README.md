@@ -1,5 +1,7 @@
 # WebScraper
 
+### By Dexter Carpenter
+
 This repository is being used to keep track of my webscraper versions and progress
 
 Below are the instuctions on how to install my websraper
