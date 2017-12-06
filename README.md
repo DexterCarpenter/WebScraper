@@ -51,6 +51,14 @@ You're all set! Happy Scraping!
 
 ________________________________________________________________________________________________________________________________________
 
+**Other Attributions**
+
+I also would like to link a peer's webscraper that I looked at to help form my own:
+
+https://github.com/ErgoShrimp/webscrape
+
+________________________________________________________________________________________________________________________________________
+
 WebScraper created by:
 
 Dexter Carpenter
