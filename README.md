@@ -18,6 +18,7 @@ There are several folders in my repository:
 
 - Class notes and other notes that I used in making the scraper; these are mostly for myself.
 - My Flowchart is also kept in this folder (as well as down below)
+	- both the PNG and the XML file are kept here
 
 **'Versions'**
 
