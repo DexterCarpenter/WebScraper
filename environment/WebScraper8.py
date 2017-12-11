@@ -1,6 +1,6 @@
 #
 # Web Scraper
-# Version: 7
+# Version: 8
 
 """
 cd C:\Users\Dexter Carpenter\Documents\GitHub\WebScraper\environment
