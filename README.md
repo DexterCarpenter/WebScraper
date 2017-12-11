@@ -46,9 +46,9 @@ ________________________________________________________________________________
 I am using Python 2.7.14
 
 Before running, be sure you install BeautifulSoup 4 in your virtual environment:
-
-	easy_install pip  
+ 
 	pip install BeautifulSoup4
+	pip install twilio
 
 You're all set! Happy Scraping!
 
