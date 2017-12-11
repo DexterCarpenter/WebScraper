@@ -83,7 +83,7 @@ if __name__ == "__main__":
 def scraper():
 	global tagcountnow
 	global tagcountold
-	
+    
     # query the website and return the html to the variable page
 	page = urllib2.urlopen(quote_page)
     
@@ -97,8 +97,32 @@ def scraper():
 		print 'No Change'
 	elif tagcountnow != tagcountold:
 		print 'Change!'
+        
 	
 	tagcountold = tagcountnow
+
+
+def twilio(): 
+    
+    # query the website and return the html to the variable page
+	page = urllib2.urlopen(quote_page)
+
+	# parse the html using beautiful soup and store in variable 'soup'
+	soup = BeautifulSoup(page, 'html.parser')
+    
+    free_food = [s for s in soup.body.stripped_strings if 'free' in s.lower()]
+
+    if free_food:
+        body = 'Free Postmates!\n\n' + '\n'.join(free_food)
+        client = TwilioRestClient(account_sid, auth_token)
+        client.messages.create(
+            body=body,
+            to=my_phone_number,
+            from_=twilio_phone_number
+        )
+
+if __name__ == "__main__":
+        twilio()
 
 while True:
 	
