@@ -59,6 +59,10 @@ ________________________________________________________________________________
 I also would like to link a peer's webscraper that I looked at to help form my own:
 
 https://github.com/ErgoShrimp/webscrape
+https://github.com/DexterCarpenter/p4mawpup-hunterjkey
+https://github.com/DexterCarpenter/p4mawpup-reydarren
+https://github.com/DexterCarpenter/p4mawpup-LiamDunbar
+https://github.com/DexterCarpenter/p4mawpup-Benji-Wan-Kenobi
 
 ________________________________________________________________________________________________________________________________________
 
